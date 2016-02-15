@@ -22,7 +22,7 @@ $(document).ready(function () {
   allNextBtn.click(function(){
       var curStep = $(this).closest(".setup-content"),
           curStepBtn = curStep.attr("id"),
-          nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+          nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children(" "),
           curInputs = curStep.find("input[type='text'],input[type='url']"),
           isValid = true;
 
@@ -40,12 +40,12 @@ $(document).ready(function () {
 
   $('div.setup-panel div a.btn-primary').trigger('click');
 });
-$(document).ready(function() {
-$("#step-2").hide();
-  
-});
 
-function showStep2() {
-    document.getElementById("step-2").style.visibility = "visible";
-    document.getElementById("step-1").style.visibility = "hidden";
+
+
+ function showStep2(target, source) {
+        document.getElementById(target).innerHTML = document.getElementById(source).innerHTML;
+
 };
+
+
