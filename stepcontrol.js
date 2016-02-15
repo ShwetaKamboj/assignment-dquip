@@ -44,7 +44,9 @@ $(document).ready(function () {
 
 
  function showStep2(target, source) {
-        document.getElementById(target).innerHTML = document.getElementById(source).innerHTML;
+        document.getElementById(target).style.display = "block";
+        document.getElementById(source).style.display="none";
+        return false;
 
 };
 
