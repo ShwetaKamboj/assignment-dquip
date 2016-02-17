@@ -50,4 +50,10 @@ $(document).ready(function () {
 
 };
 
+function showstep1()
+{
+  document.getElementById("step-2").style.display = "none";
+  document.getElementById("step-3").style.display = "none";
+document.getElementById("step-1").style.display = "block";
 
+}
